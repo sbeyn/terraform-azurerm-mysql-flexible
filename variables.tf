@@ -112,7 +112,7 @@ variable "mysqlflex_size_gb" {
 }
 variable "mysqlflex_sku_name" {
   description = "(Optional) The SKU Name for the MySQL Flexible Server. should start with SKU tier B (Burstable), GP (General Purpose), MO (Memory Optimized) like B_Standard_B1s."
-  default     = "B_Standard_B1s"
+  default     = "GP_Standard_D2ds_v4"
   type        = string
 }
 variable "mysqlflex_standby_availability_zone" {
@@ -137,7 +137,7 @@ variable "mysqlflex_version" {
 }
 variable "mysqlflex_zone" {
   description = "(Optional) The availability zone information of the MySQL Flexible Server. Possible values are 1, 2 and 3."
-  default     = 3
+  default     = 1
   type        = number
 }
 variable "resource_group_name" {
