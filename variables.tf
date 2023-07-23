@@ -137,7 +137,7 @@ variable "mysqlflex_version" {
 }
 variable "mysqlflex_zone" {
   description = "(Optional) The availability zone information of the MySQL Flexible Server. Possible values are 1, 2 and 3."
-  default     = 1
+  default     = 3
   type        = number
 }
 variable "resource_group_name" {
