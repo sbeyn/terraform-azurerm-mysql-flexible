@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "example" {
   }
 }
 
-module "resource_group" {
+module "mysql_flex" {
   source = "../../"
 
   mysqlflex_name                = "mysqlflex-${random_string.this.result}"
@@ -34,4 +34,9 @@ module "resource_group" {
   tags = {
     Terratest       = "true"
   }
+
+  depends_on = [
+    azurerm_resource_group.example
+  ]
+
 }
