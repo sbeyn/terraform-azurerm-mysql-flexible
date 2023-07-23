@@ -6,7 +6,7 @@ resource "random_string" "this" {
 
 resource "azurerm_resource_group" "example" {
   name     = "tftest${random_string.this.result}"
-  location = "francecentral"
+  location = "West Europe"
   tags = {
     test = "tftest${random_string.this.result}"
   }
@@ -17,7 +17,7 @@ module "resource_group" {
 
   mysqlflex_name                = "mysqlflex-${random_string.this.result}"
   resource_group_name           = "tftest${random_string.this.result}"
-  location                      = "francecentral"
+  location                      = "West Europe"
   mysqlflex_database_name       = "tftest"
 
   mysqlflex_configuration = {
