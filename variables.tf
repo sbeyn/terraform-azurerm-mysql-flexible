@@ -111,8 +111,8 @@ variable "mysqlflex_size_gb" {
   type        = number
 }
 variable "mysqlflex_sku_name" {
-  description = "(Optional) The SKU Name for the MySQL Flexible Server. List: Standard_B1ms Standard_B1s Standard_B2s Standard_D16ds_v4 Standard_D2ds_v4 Standard_D32ds_v4 Standard_D48ds_v4 Standard_D4ds_v4 Standard_D64ds_v4 Standard_D8ds_v4 Standard_E16ds_v4 Standard_E2ds_v4 Standard_E32ds_v4 Standard_E48ds_v4 Standard_E4ds_v4 Standard_E64ds_v4 Standard_E8ds_v4"
-  default     = "Standard_B1ms"
+  description = "(Optional) The SKU Name for the MySQL Flexible Server. should start with SKU tier B (Burstable), GP (General Purpose), MO (Memory Optimized) like B_Standard_B1s."
+  default     = "B_Standard_B1s"
   type        = string
 }
 variable "mysqlflex_standby_availability_zone" {
